@@ -92,4 +92,10 @@ button{
     font-family: monospace;
     overflow: scroll;
 }
+label{
+    margin: 1dvh;
+    font-size: large;
+    font-family: monospace;
+    
+}
 
