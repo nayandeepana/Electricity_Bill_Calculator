@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Electricity Bill Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div class=cal_bg>
+            <h3>Electricity Bill Calculator<h3>
+            <form>
+                <input id="previous_unit" placeholder="Enter Previous Bill Unit" >
+                <input id="recent_unit" placeholder="Enter Recent Bill Unit"> 
+                <button class="button" type="button" onclick="calculate()"><span>Calculate  </span></button>
+                <input class=result id="result" readonly>
+            </form>
+        </div>        
+
+
+    </body>
+
+    <script type="text/javascript">
+        function calculate() {
+            var previous_unit = document.getElementById('previous_unit').value;
+            var recent_unit = document.getElementById('recent_unit').value;
+            var total = parseInt(recent_unit) - parseInt(previous_unit);
+            var res = 0;
+    
+            if (total <= 22) {
+                res = 5.04 * total;
+            } else if (total <= 40) {
+                res = 6.33 * total;
+            } else if (total <= 66) {
+                res = 7.12 * total;
+            } else if (total <= 132) {
+                res = 7.52 * total;
+            } else if (total <= 195) {
+                res = 7.69 * total;
+            } else {
+                res = 7.69 * total;
+            }
+            
+            document.getElementById("result").value ="Total Unit: "+total +" Amount: ₹" + res;
+        }
+    </script>
+    
+</html>
