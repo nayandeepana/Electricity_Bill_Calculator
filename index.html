@@ -17,6 +17,8 @@
                 <input id="recent_unit" placeholder="Enter Recent Bill Unit"> 
                 <button class="button" type="button" onclick="calculate()"><span>Calculate  </span></button>
                 <input class=result id="result" readonly>
+                <label id="total_unit"></label>
+                <label id="rate"></label>    
             </form>
         </div>        
 
@@ -45,6 +47,8 @@
             }
             
             document.getElementById("result").value ="Total Unit: "+total +" Amount: ₹" + res;
+            document.getElementById("total_unit").innerHTML ="Total Unit: " + total;
+            document.getElementById("rate").innerHTML ="Rate Per Unit: " + (res/total) + "/-";
         }
     </script>
     
