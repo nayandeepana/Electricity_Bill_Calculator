@@ -90,6 +90,7 @@ button{
     text-align: center;
     cursor: not-allowed;
     font-family: monospace;
+    overflow: scroll;
 }
 
 .button2 {
