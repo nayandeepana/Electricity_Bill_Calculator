@@ -15,6 +15,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 80dvw;
+    box-shadow: 0 0 37px rgba(0, 0, 0, 18.1);
 }
     
 h3{
