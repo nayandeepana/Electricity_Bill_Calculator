@@ -92,6 +92,7 @@ button{
     cursor: not-allowed;
     font-family: monospace;
     overflow: scroll;
+    text-wrap: wrap;
 }
 label{
     margin: 1dvh;
